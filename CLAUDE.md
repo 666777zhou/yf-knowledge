@@ -39,13 +39,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `计算机科学.md` → `## 计算机网络`、`## 数据结构`、`## 操作系统` 等
 - `数据挖掘.md` → `## 车端通信`、`## 仿真数据源`、`## EDR 系统` 等
 
-**B. 二级标题可折叠**：每个 `##` 分类用 `<details>` 包裹内容，`<summary>` 写"展开/折叠"，内部条目用 `###` 三级标题，条目本身不折叠。不加日期。
+**B. 二级标题可折叠**：`<details>` 包裹整个分类，`##` 标题放进 `<summary>` 内使折叠箭头位于标题左侧。内部条目用 `###` 三级标题，条目之间用 `---` 分隔线。不加日期。
 
 ```markdown
+<details>
+<summary>
+
 ## 计算机网络
 
-<details>
-<summary>展开/折叠</summary>
+</summary>
 
 ### TCP 与 HTTP 的关系
 
@@ -53,11 +55,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - 精炼的知识内容（要点形式，简洁扼要）
 
+---
+
 ### 另一个主题
 
 一句话总结：...
 
 - 要点
+
 </details>
 ```
 
@@ -87,10 +92,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 内容格式参考示例
 
 ```markdown
+<details>
+<summary>
+
 ## 版本控制
 
-<details>
-<summary>展开/折叠</summary>
+</summary>
 
 ### Git 工作区、暂存区与版本库
 
