@@ -54,7 +54,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### 规则 6：Git 操作规范
 
 - **commit**：知识文件有变更时可以主动 commit，不需要每次询问用户
-- **push**：commit 后**必须先询问用户**是否 push 到远程仓库，绝不主动 push
+- **push**：commit 后直接 push（权限提示会确认），不需要用文字询问用户
 - 用户可能还没有配置远程仓库，push 前先检查 `git remote -v`
 
 ## 用户特征
