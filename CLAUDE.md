@@ -39,19 +39,30 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `计算机科学.md` → `## 计算机网络`、`## 数据结构`、`## 操作系统` 等
 - `数据挖掘.md` → `## 车端通信`、`## 仿真数据源`、`## EDR 系统` 等
 
-**B. 二级标题可折叠**：`<details>` 包裹整个分类，`##` 标题放进 `<summary>` 内使折叠箭头位于标题左侧。内部条目用 HTML `<h3 style="color: #XXXXXX;">` 实现彩色标题，条目之间用 `---` 分隔线。不加日期。
+**B. 格式规范**：
+
+- `<details open>` 默认展开，`##` 标题放入 `<summary>` 使折叠箭头在左侧
+- `###` 条目用 HTML `<h3 style="color: #XXXXXX;">` 彩色标题
+- 每条的"一句话总结"用 `<blockquote>` 高亮块，左边框颜色与 h3 一致，背景色为对应浅色
+- 条目之间用 `---` 分隔，不标注日期
+- 技术关键词用反引号 `` ` `` 标记
+- 对比类内容优先用表格
+- 文件顶部 `#` 标题下放置 TOC 目录链接
 
 配色规则：
-- 理论基础 → 蓝 `#2563eb`
-- 局限/问题 → 琥珀 `#d97706`
-- 隐患/陷阱 → 红 `#dc2626`
-- 对比/选型 → 紫 `#7c3aed`
-- 系统架构 → 翠绿 `#059669`
-- 工具/平台 → 青 `#0891b2`
-- 通信协议 → 靛蓝 `#4f46e5`
+
+| 类型 | 色值 | 背景 |
+|------|------|------|
+| 理论基础 | `#2563eb` | `#f0f4ff` |
+| 局限/问题 | `#d97706` | `#fffbeb` |
+| 隐患/陷阱 | `#dc2626` | `#fef2f2` |
+| 对比/选型 | `#7c3aed` | `#f5f3ff` |
+| 系统架构 | `#059669` | `#ecfdf5` |
+| 工具/平台 | `#0891b2` | `#ecfeff` |
+| 通信协议 | `#4f46e5` | `#eef2ff` |
 
 ```markdown
-<details>
+<details open>
 <summary>
 
 ## 计算机网络
@@ -60,15 +71,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 <h3 style="color: #2563eb;">TCP 与 HTTP 的关系</h3>
 
-一句话总结：用一句通俗精炼的话概括核心结论。
+<blockquote style="border-left: 4px solid #2563eb; padding: 12px 16px; background: #f0f4ff; margin: 12px 0; border-radius: 0 4px 4px 0;">
+💡 <strong>一句话总结</strong>：用一句通俗精炼的话概括核心结论。
+</blockquote>
 
 - 精炼的知识内容（要点形式，简洁扼要）
+- 技术关键词用 `反引号` 标记
 
 ---
 
 <h3 style="color: #d97706;">另一个主题</h3>
 
-一句话总结：...
+<blockquote style="border-left: 4px solid #d97706; padding: 12px 16px; background: #fffbeb; margin: 12px 0; border-radius: 0 4px 4px 0;">
+💡 <strong>一句话总结</strong>：...
+</blockquote>
 
 - 要点
 
@@ -101,20 +117,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## 内容格式参考示例
 
 ```markdown
-<details>
+- [版本控制](#版本控制)
+
+<details open>
 <summary>
 
 ## 版本控制
 
 </summary>
 
-### Git 工作区、暂存区与版本库
+<h3 style="color: #2563eb;">Git 工作区、暂存区与版本库</h3>
 
-一句话总结：工作区是你编辑的地方，暂存区是购物车，版本库是历史快照——git add 添加购物车，git commit 结算到历史。
+<blockquote style="border-left: 4px solid #2563eb; padding: 12px 16px; background: #f0f4ff; margin: 12px 0; border-radius: 0 4px 4px 0;">
+💡 <strong>一句话总结</strong>：工作区是你编辑的地方，暂存区是购物车，版本库是历史快照——`git add` 添加购物车，`git commit` 结算到历史。
+</blockquote>
 
-- **工作区（Working Directory）**：你电脑上能看到的项目文件夹，编辑文件都在这里进行
-- **暂存区（Staging Area / Index）**：`git add` 之后、`git commit` 之前，文件暂存的地方
-- **版本库（Repository）**：`git commit` 之后，文件被永久保存到 `.git` 目录中
+- **工作区**：你电脑上能看到的项目文件夹，编辑文件都在这里
+- **暂存区**：`git add` 之后、`git commit` 之前，文件暂存的地方
+- **版本库**：`git commit` 之后，文件永久保存到 `.git` 目录
 - 三者关系：工作区 →(`git add`)→ 暂存区 →(`git commit`)→ 版本库
 
 </details>
