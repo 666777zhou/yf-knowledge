@@ -40,6 +40,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```markdown
 ## 主题标题 `YYYY-MM-DD`
 
+一句话总结：用一句通俗精炼的话概括核心结论。
+
 精炼的知识内容（要点形式，简洁扼要）
 ```
 
