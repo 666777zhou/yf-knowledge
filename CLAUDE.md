@@ -39,7 +39,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `计算机科学.md` → `## 计算机网络`、`## 数据结构`、`## 操作系统` 等
 - `数据挖掘.md` → `## 车端通信`、`## 仿真数据源`、`## EDR 系统` 等
 
-**B. 二级标题可折叠**：`<details>` 包裹整个分类，`##` 标题放进 `<summary>` 内使折叠箭头位于标题左侧。内部条目用 `###` 三级标题，条目之间用 `---` 分隔线。不加日期。
+**B. 二级标题可折叠**：`<details>` 包裹整个分类，`##` 标题放进 `<summary>` 内使折叠箭头位于标题左侧。内部条目用 HTML `<h3 style="color: #XXXXXX;">` 实现彩色标题，条目之间用 `---` 分隔线。不加日期。
+
+配色规则：
+- 理论基础 → 蓝 `#2563eb`
+- 局限/问题 → 琥珀 `#d97706`
+- 隐患/陷阱 → 红 `#dc2626`
+- 对比/选型 → 紫 `#7c3aed`
+- 系统架构 → 翠绿 `#059669`
+- 工具/平台 → 青 `#0891b2`
+- 通信协议 → 靛蓝 `#4f46e5`
 
 ```markdown
 <details>
@@ -49,7 +58,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 </summary>
 
-### TCP 与 HTTP 的关系
+<h3 style="color: #2563eb;">TCP 与 HTTP 的关系</h3>
 
 一句话总结：用一句通俗精炼的话概括核心结论。
 
@@ -57,7 +66,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
-### 另一个主题
+<h3 style="color: #d97706;">另一个主题</h3>
 
 一句话总结：...
 
